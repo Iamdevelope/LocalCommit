@@ -5,3 +5,77 @@ UnityÔÚ·¢²¼³ÉÒÆ¶¯¶ËÏîÄ¿ºó£¬ÆäËûÎÄ¼şÂ·¾¶¶¼½«²»´æÔÚ£¬µ«ÊÇÈç¹ûÓĞÒ»Ğ©±ØÒªµÄ×ÊÔ´£¬¿ÉÒ
 StreamingAssets£º
 ¸ÃÂ·¾¶»áÔÚ·¢²¼¹¤³ÌÊ±£¬ÀïÃæµÄ×ÊÔ´»áÔ­·â²»¶¯µÄ½øĞĞ´ò°üµ½°üÌåÖĞ£¬²»¹ıÀïÃæµÄ×ÊÔ´Ö»ÄÜ²ÉÓÃWWWµÄ·½Ê½½øĞĞ¶ÁÈ¡£¬ËùÒÔ·ÃÎÊËÙ¶ÈÓĞÏŞ£¬»òÕß²ÉÓÃAssetBundleµÄ·½Ê½¡£
 µ«ÊÇÕâÑù¶¼»áµ¼ÖÂ×îºó·¢²¼µÄ°üÌåÌå»ı¹ı´ó£¬ÇÒ¸ÃÂ·¾¶ÏÂµÄ×ÊÔ´¿É¶Á²»¿ÉĞ´¡£
+ÔÚc#ÖĞÊ¹ÓÃDirectory.GetFiles»ñÈ¡ÎÄ¼ş¼ĞÊ±£¬ÔÚApplication.persistentDataPathÂ·¾¶ÏÂ£¬Ö±½Ó»ñÈ¡»á³öÏÖÂ·¾¶Îª¿ÕÒì³£¡£
+ÇÒÔÚÊ¹ÓÃUnityÖĞ·â×°ºÃµÄApplication.streamingAssetsPathÊ±£¬°²×¿Â·¾¶ÔÚÇ°Ãæ²»ĞèÒª¼Ó"jar:file///"£¬ÒòÎªÆä×Ô¼ºÒÑ¾­×Ô´øÁË£¬ËùÒÔÔÙ¼ÓµÄ»°»á·ÃÎÊ²»µ½£¬»òÕß¿ÉÒÔ
+Ê¹ÓÃ"jar:file://"+Application.dataPath+"!/assets/"
+2¡¢³öÏÖÂ·¾¶½ûÖ¹·ÃÎÊBUG
+ÎÒÔÚ·¢²¼µ½Androidºó£¬ÀûÓÃApplication.persistentDataPathÎŞ·¨·ÃÎÊµ½Ïà¶ÔÓ¦µÄapp°²×°Â·¾¶£¬³öÏÖunauthorizedaccessexception Access to the path "/jar:file:"is denied
+ÎÊÌâ¡£×îºó½â¾ö·¢ÏÖÊ±Â·¾¶Ç°ÃæµÄĞ­ÒéĞ´´íÁË£¬
+ÒªÊÇ·ÃÎÊapkÄÚ²¿×ÊÔ´Ó¦¸ÃÔÚÇ°Ãæ¼Ó"jar:file://",·ñÔòµÄ»°¾ÍÊÇ¼Ó"file://"¡£
+
+
+UnityÖĞ¼¸¸öÌØÊâÂ·¾¶µÄËµÃ÷£º
+dataPath :·µ»Ø³ÌĞòµÄÊı¾İÎÄ¼şËùÔÚµÄÎÄ¼ş¼ĞµÄÂ·¾¶£¨Ö»¶Á£©¡£·µ»ØÂ·¾¶ÎªÏà¶ÔÂ·¾¶£¬Ò»°ãÊÇÏà¶ÔÓÚ³ÌĞò°²×°Ä¿Â¼µÄÎ»ÖÃ¡£²»Í¬ÓÎÏ·Æ½Ì¨µÄÊı¾İÎÄ¼ş±£´æÂ·¾¶²»Í¬¡£
+
+
+StreamingAssetsPath£º ´ËÊôĞÔÓÃÓÚ·µ»ØÊı¾İÁ÷µÄ»º´æÄ¿Â¼£¬·µ»ØÂ·¾¶ÎªÏà¶ÔÂ·¾¶£¬ÊÊºÏÉèÖÃÒ»Ğ©Íâ²¿Êı¾İÎÄ¼şµÄÂ·¾¶¡££¨Ö»¶Á£©
+
+PersistentDataPath£º·µ»ØÒ»¸ö³Ö¾Ã»¯Êı¾İ´æ´¢Ä¿Â¼µÄÂ·¾¶£¨Ö»¶Á£©£¬¿ÉÒÔÔÚ´ËÂ·¾¶ÏÂ´æ´¢Ò»Ğ©³Ö¾Ã»¯µÄÊı¾İÎÄ¼ş¡£¶ÔÓ¦Í¬Ò»Æ½Ì¨£¬ÔÚ²»Í¬³ÌĞòÖĞµ÷ÓÃ´ËÊôĞÔÊ±£¬Æä·µ»ØÖµÊÇÏàÍ¬µÄ£¬µ«ÊÇÔÚ²»Í¬µÄÔËĞĞÆ½Ì¨ÏÂ£¬Æä·µ»ØÖµ»á²»Ò»Ñù¡£
+
+
+temporaryCachePath£º´ËÊôĞÔÓÃÓÚ·µ»ØÒ»¸öÁÙÊ±Êı¾İµÄ»º³åÄ¿Â¼£¨Ö»¶Á£©¡£¶ÔÓÚÍ¬Ò»Æ½Ì¨£¬ÔÚ²»Í¬³ÌĞòÖĞµ÷ÓÃ´ËÊôĞÔÊ±£¬Æä·µ»ØÖµÊÇÏàÍ¬µÄ£¬µ«ÊÇÔÚ²»Í¬µÄÔËĞĞÆ½Ì¨ÏÂ£¬Æä·µ»ØÖµÊÇ²»Ò»ÑùµÄ¡£
+
+
+persistentDataPathºÍtemporaryCachePathµÄ·µ»ØÖµÒ»°ãÊÇ³ÌĞòËùÔÚÆ½Ì¨µÄ¹Ì¶¨Î»ÖÃ£¬ÊÊºÏ³ÌĞòÔÚÔËĞĞ¹ı³ÌÖĞ²úÉúµÄÊı¾İÎÄ¼ş¡£
+
+
+
+
+IOS£º
+
+Application.dataPath :	        Application/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/xxx.app/Data
+
+Application.streamingAssetsPath :     Application/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/xxx.app/Data/Raw
+
+Application.persistentDataPath :       Application/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/Documents
+
+Application.temporaryCachePath :    Application/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/Library/Caches
+
+
+
+
+Android:
+
+Application.dataPath :     	        /data/app/xxx.xxx.xxx.apk
+
+Application.streamingAssetsPath :     jar:file:///data/app/xxx.xxx.xxx.apk/!/assets
+
+Application.persistentDataPath :       /data/data/xxx.xxx.xxx/files
+
+Application.temporaryCachePath :    /data/data/xxx.xxx.xxx/cache
+
+
+
+
+Windows:
+
+Application.dataPath :                      /Assets
+
+Application.streamingAssetsPath :    /Assets/StreamingAssets
+
+Application.persistentDataPath :      C:/Users/xxxx/AppData/LocalLow/CompanyName/ProductName
+
+Application.temporaryCachePath :   C:/Users/xxxx/AppData/Local/Temp/CompanyName/ProductName
+
+
+
+
+Mac:
+
+Application.dataPath :                      /Assets
+
+Application.streamingAssetsPath :    /Assets/StreamingAssets
+
+Application.persistentDataPath :      /Users/xxxx/Library/Caches/CompanyName/Product Name
+
+Application.temporaryCachePath :   /var/folders/57/6b4_9w8113x2fsmzx_yhrhvh0000gn/T/CompanyName/Product Name
