@@ -5,13 +5,13 @@ UnityÔÚ·¢²¼³ÉÒÆ¶¯¶ËÏîÄ¿ºó£¬ÆäËûÎÄ¼şÂ·¾¶¶¼½«²»´æÔÚ£¬µ«ÊÇÈç¹ûÓĞÒ»Ğ©±ØÒªµÄ×ÊÔ´£¬¿ÉÒ
 StreamingAssets£º
 ¸ÃÂ·¾¶»áÔÚ·¢²¼¹¤³ÌÊ±£¬ÀïÃæµÄ×ÊÔ´»áÔ­·â²»¶¯µÄ½øĞĞ´ò°üµ½°üÌåÖĞ£¬²»¹ıÀïÃæµÄ×ÊÔ´Ö»ÄÜ²ÉÓÃWWWµÄ·½Ê½½øĞĞ¶ÁÈ¡£¬ËùÒÔ·ÃÎÊËÙ¶ÈÓĞÏŞ£¬»òÕß²ÉÓÃAssetBundleµÄ·½Ê½¡£
 µ«ÊÇÕâÑù¶¼»áµ¼ÖÂ×îºó·¢²¼µÄ°üÌåÌå»ı¹ı´ó£¬ÇÒ¸ÃÂ·¾¶ÏÂµÄ×ÊÔ´¿É¶Á²»¿ÉĞ´¡£
-ÔÚc#ÖĞÊ¹ÓÃDirectory.GetFiles»ñÈ¡ÎÄ¼ş¼ĞÊ±£¬ÔÚApplication.persistentDataPathÂ·¾¶ÏÂ£¬Ö±½Ó»ñÈ¡»á³öÏÖÂ·¾¶Îª¿ÕÒì³£¡£
+
 ÇÒÔÚÊ¹ÓÃUnityÖĞ·â×°ºÃµÄApplication.streamingAssetsPathÊ±£¬°²×¿Â·¾¶ÔÚÇ°Ãæ²»ĞèÒª¼Ó"jar:file///"£¬ÒòÎªÆä×Ô¼ºÒÑ¾­×Ô´øÁË£¬ËùÒÔÔÙ¼ÓµÄ»°»á·ÃÎÊ²»µ½£¬»òÕß¿ÉÒÔ
 Ê¹ÓÃ"jar:file://"+Application.dataPath+"!/assets/"
-2¡¢³öÏÖÂ·¾¶½ûÖ¹·ÃÎÊBUG
-ÎÒÔÚ·¢²¼µ½Androidºó£¬ÀûÓÃApplication.persistentDataPathÎŞ·¨·ÃÎÊµ½Ïà¶ÔÓ¦µÄapp°²×°Â·¾¶£¬³öÏÖunauthorizedaccessexception Access to the path "/jar:file:"is denied
-ÎÊÌâ¡£×îºó½â¾ö·¢ÏÖÊ±Â·¾¶Ç°ÃæµÄĞ­ÒéĞ´´íÁË£¬
-ÒªÊÇ·ÃÎÊapkÄÚ²¿×ÊÔ´Ó¦¸ÃÔÚÇ°Ãæ¼Ó"jar:file://",·ñÔòµÄ»°¾ÍÊÇ¼Ó"file://"¡£
+persistentDataPath:
+ÔÚÈÎºÎÆ½Ì¨Ê¹ÓÃÕâ¸öÂ·¾¶Ê±£¬¶¼¿ÉÒÔÖ±½ÓÊ¹ÓÃApplication.persistentDataPath
+
+Èç¹ûÏòÏë»ñÈ¡µ½Â·¾¶ÏÂµÄÎÄ¼ş¼Ğ£¬Ôò¿ÉÒÔÊ¹ÓÃ£ºDirectory.GetDirectories(path),Èç¹ûÒª»ñÈ¡ÎÄ¼şµÄ»°£¬ÔòÊ¹ÓÃDirectory.GetFiles(Path)
 
 
 UnityÖĞ¼¸¸öÌØÊâÂ·¾¶µÄËµÃ÷£º
