@@ -13,6 +13,8 @@ persistentDataPath:
 
 如果向想获取到路径下的文件夹，则可以使用：Directory.GetDirectories(path),如果要获取文件的话，则使用Directory.GetFiles(Path)
 
+在读取Android端的路径时，由于移动端所采用的是沙盒存储，所以路径为：/storage/emulated/0/Android/data/com.companyName.productName/
+
 
 Unity中几个特殊路径的说明：
 dataPath :返回程序的数据文件所在的文件夹的路径（只读）。返回路径为相对路径，一般是相对于程序安装目录的位置。不同游戏平台的数据文件保存路径不同。
